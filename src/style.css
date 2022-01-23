@@ -1,0 +1,22 @@
+body {
+  background: #eee;
+  margin: 0 auto;
+  max-width: 800px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.course {
+  background: #2a265f;
+  padding: 10px;
+  margin: 10px;
+}
+
+.course h4 {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+}
