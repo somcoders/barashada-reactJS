@@ -9,6 +9,7 @@ body {
   background: #2a265f;
   padding: 10px;
   margin: 10px;
+  width: 40%;
 }
 
 .course h4 {
@@ -19,4 +20,9 @@ body {
 .courses {
   display: flex;
   flex-wrap: wrap;
+}
+
+.course-info {
+  display: flex;
+  justify-content: space-between;
 }
