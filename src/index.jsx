@@ -3,15 +3,17 @@ import ReactDOM from 'react-dom'
 import './style.css'
 
 
-function Course(props){
-    // console.log(props);
+function Course({title,price,isNew}){
+    // const {title,price,isNew} = props;
+    // console.log(title);
+
     const name = "ReactJS basics"
     return(
         <div className='course'>
-            <h4>{props.title ?? 'Untitled Course'}</h4>
+            <h4>{title ?? 'Untitled Course'}</h4>
             <div className='course-info'>
-                <p style={{color:'#ff0'}}>{props.isNew && 'New'}</p>
-                <p style={{color:'#ddd'}}>Price: props.price}</p>
+                <p style={{color:'#ff0'}}>{isNew && 'New'}</p>
+                <p style={{color:'#ddd'}}>Price: {price}</p>
             </div>
         </div>
     )
