@@ -1,13 +1,20 @@
 import Course from './Course'
+import courseData from '../courseData'
 
 export default function Courses(){
+
+
+//    const courses = courseData.map(function(course){
+//        return   <Course title={course.title} price={course.price} isNew={course.isNew}/>
+//    });
+
+   const courses = courseData.map(course => ( 
+        <Course key={course.id} title={course.title} price={course.price} isNew={course.isNew}/>
+   ))
+
     return (
         <div className='courses'>
-            <Course title='ReactJs Basics' price="10" isNew={true}/>
-            <Course title='JavaScript Basics' price="10" isNew={true}/>
-            <Course title='Vue Basics' price="10" isNew={false}/>
-            <Course title='CSS Basics' price="10" isNew={true}/>
-            <Course  price="10" isNew={false}/>
+            {courses}
         </div>
     )
 }

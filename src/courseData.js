@@ -1,0 +1,32 @@
+export default [
+    {
+        id:1,
+        title:"ReactJS basics",
+        price:10,
+        isNew:true
+    },
+    {
+        id:2,
+        title:"JavaScript Basics",
+        price:0,
+        isNew:true
+    },
+    {
+        id:3,
+        title:"Vue Basics",
+        price:10,
+        isNew:false
+    },
+    {
+        id:4,
+        title:"CSS Basics",
+        price:0,
+        isNew:false
+    },
+    {
+        id:5,
+        title:"HTML Basics",
+        price:0,
+        isNew:false
+    }
+]
