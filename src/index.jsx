@@ -18,7 +18,7 @@ function App() {
                 >{ theme == "white" ? "🌒" : "☀️"}
               
              </span>
-            <Courses theme={theme}/>
+            <Courses />
         </div>
     ) 
 }
