@@ -3,12 +3,7 @@ import courseData from '../courseData'
 
 export default function Courses(){
 
-
-//    const courses = courseData.map(function(course){
-//        return   <Course title={course.title} price={course.price} isNew={course.isNew}/>
-//    });
-
-   const courses = courseData.map(course => ( 
+    const courses = courseData.map(course => ( 
         <Course key={course.id} title={course.title} price={course.price} isNew={course.isNew}/>
    ))
 
