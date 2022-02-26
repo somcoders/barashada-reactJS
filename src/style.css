@@ -26,3 +26,19 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+.filters {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.filters button {
+  background-color: #2a265f;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 45px;
+  margin-right: 10px;
+  border: 1px solid #eee;
+  font-weight: bold;
+}
