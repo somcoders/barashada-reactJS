@@ -6,7 +6,7 @@ export default function Courses(){
     const [allCourses,setAllCourses] = useState(courseData);
     const [filteredCourses,setFilteredCourses] = useState([]);
 
-    const filterData = ["All","Free","Paid","New"];
+    const filterData = ["All","Free","Paid"];
 
     function getCourses(){
         if(filteredCourses.length > 0){
@@ -21,9 +21,9 @@ export default function Courses(){
    ))
    
    function filetrByPrice(filterValue){
-        if(filterValue == "Free"){
+        if(filterValue === "Free"){
             return allCourses.filter(courses => courses.price == 0)
-        }else if(filterValue == "Paid"){
+        }else if(filterValue === "Paid"){
             return allCourses.filter(courses => courses.price > 0)
         }else{
             return [];
@@ -42,7 +42,7 @@ export default function Courses(){
     return (
         <>  
             <div className="filters">
-                {filterData.map(filter => <button onClick={filterCourses}>{filter}</button>)}
+                {filterData.map(filter => <button key={filter} onClick={filterCourses}>{filter}</button>)}
             </div>
             <div className='courses'>
                 {courses.length > 0 ? courses : "No Courses Found"}
