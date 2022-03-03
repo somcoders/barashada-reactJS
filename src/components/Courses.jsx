@@ -1,11 +1,24 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import Course from './Course'
-import courseData from '../courseData'
+import ReactLoading from 'react-loading';
 
 export default function Courses(){
-    const [allCourses,setAllCourses] = useState(courseData);
+    const [allCourses,setAllCourses] = useState([]);
     const [filteredCourses,setFilteredCourses] = useState([]);
+    const [loading,setLoading] = useState(false);
 
+    const url = "https://raw.githubusercontent.com/somcoders/barashada-reactJS/main/data.json"
+    useEffect(() => {
+    setTimeout(() => { 
+        fetch(url)
+        .then(resp => resp.json())
+        .then(data => {
+            setAllCourses(data);
+            setLoading(true);
+        });
+    },2000)
+    },[])
+   
     const filterData = ["All","Free","Paid"];
 
     function getCourses(){
@@ -39,14 +52,24 @@ export default function Courses(){
        }
    }
 
+   const Spinner = ({ type, color }) => (
+    <ReactLoading type={type} color={color} height={667} width={375} />
+    );
+
     return (
         <>  
             <div className="filters">
                 {filterData.map(filter => <button key={filter} onClick={filterCourses}>{filter}</button>)}
             </div>
-            <div className='courses'>
+            {!loading 
+            ? 
+           <Spinner color={"orange"} type={"balls"}/>
+            :
+                <div className='courses'>
                 {courses.length > 0 ? courses : "No Courses Found"}
-            </div>
+                </div>
+            }
+          
         </>
        
     )
