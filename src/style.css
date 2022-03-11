@@ -42,3 +42,8 @@ body {
   border: 1px solid #eee;
   font-weight: bold;
 }
+
+.spinner {
+  display: flex;
+  justify-content: center;
+}

@@ -53,7 +53,9 @@ export default function Courses(){
    }
 
    const Spinner = ({ type, color }) => (
-    <ReactLoading type={type} color={color} height={667} width={375} />
+       <div className="spinner">
+            <ReactLoading type={type} color={color} height={667} width={375} />
+        </div>
     );
 
     return (
