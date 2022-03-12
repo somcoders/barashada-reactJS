@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-function CourseDetial() {
+function CourseDetail() {
     const course = useParams();
     return (
         <div>
@@ -10,4 +10,4 @@ function CourseDetial() {
     );
 }
 
-export default CourseDetial;
+export default CourseDetail;

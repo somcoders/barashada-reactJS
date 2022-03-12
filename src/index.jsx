@@ -6,6 +6,7 @@ import {BrowserRouter,Link,Routes,Route} from 'react-router-dom'
 import About from './components/About'
 import Contact from './components/Contact'
 import NotFound from './components/NotFound'
+import CourseDetail from './components/CourseDetail'
 
 function App() {
     const [theme,setTheme] = useState("white");
@@ -34,6 +35,7 @@ function App() {
                     <Route path='/' element={<Courses />} />
                     <Route path='/about' element={<About />} />
                     <Route path='/contact' element={<Contact />} />
+                    <Route path='/course/:id' element={<CourseDetail />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
 
