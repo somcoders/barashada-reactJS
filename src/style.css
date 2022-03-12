@@ -47,3 +47,16 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #2a265f;
+  padding: 5px;
+}
+.nav a {
+  color: orange;
+  font-weight: bold;
+  text-decoration: none;
+}
