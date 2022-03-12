@@ -60,3 +60,14 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
+.active {
+  color: red !important;
+}
+
+.course a {
+  text-decoration: none;
+}
+
+.course h4:hover {
+  color: orange !important;
+}

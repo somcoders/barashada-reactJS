@@ -30,7 +30,7 @@ export default function Courses(){
     }
 
     const courses = getCourses().map(course => ( 
-        <Course key={course.id} title={course.title} price={course.price} isNew={course.isNew}/>
+        <Course key={course.id}  id={course.id} title={course.title} price={course.price} isNew={course.isNew}/>
    ))
    
    function filetrByPrice(filterValue){
