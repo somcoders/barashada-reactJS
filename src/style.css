@@ -4,6 +4,9 @@ body {
   max-width: 800px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.container {
+  height: 100vh;
+}
 
 .course {
   background: #2a265f;
