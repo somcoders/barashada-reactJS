@@ -9,14 +9,18 @@ export default function Courses(){
 
     const url = "https://raw.githubusercontent.com/somcoders/barashada-reactJS/main/data.json"
     useEffect(() => {
-    setTimeout(() => { 
-        fetch(url)
-        .then(resp => resp.json())
-        .then(data => {
-            setAllCourses(data);
-            setLoading(true);
-        });
-    },2000)
+        const controller = new AbortController();
+            fetch(url,{signal:controller.signal})
+            .then(resp => resp.json())
+            .then(data => {
+                setAllCourses(data);
+                setLoading(true);
+            }).catch(error => {
+                if(error.code === 20){
+                    console.log("Requet aborted")
+                }
+            });
+        return () => controller.abort();
     },[])
    
     const filterData = ["All","Free","Paid"];
