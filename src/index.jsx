@@ -6,14 +6,18 @@ import Pages from './components/Pages';
 import Nav from './components/Nav';
 import { ThemeContextProvider } from './context/ThemeContextProvider';
 
+export const AuthContext = createContext();
+
 function App() {
   
     return (
         <ThemeContextProvider>
-            <BrowserRouter>
-                <Nav />
-                <Pages />
-            </BrowserRouter>
+            <AuthContext.Provider value={true}>
+                <BrowserRouter>
+                    <Nav />
+                    <Pages />
+                </BrowserRouter>
+            </AuthContext.Provider>
         </ThemeContextProvider>
     ) 
 }

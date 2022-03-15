@@ -5,6 +5,7 @@ import Contact from './Contact'
 import NotFound from './NotFound'
 import CourseDetail from './CourseDetail'
 import Courses from './Courses'
+import Profile from './Profile'
 
 function Pages(props) {
     return (
@@ -13,6 +14,7 @@ function Pages(props) {
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/course/:id' element={<CourseDetail />} />
+            <Route path='/profile' element={<Profile />} />
             <Route path='*' element={<NotFound />} />
         </Routes>
     );
