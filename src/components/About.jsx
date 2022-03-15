@@ -1,10 +1,15 @@
 import React from 'react';
+import { ThemeContext } from '../index';
 
 function About(props) {
     return (
-        <div>
-            <h4>About us</h4>
-        </div>
+        <ThemeContext.Consumer>
+            {theme => (
+                <div className={`container ${theme}`}>
+                    <h4>About us {theme}</h4>
+                </div>
+            )}
+        </ThemeContext.Consumer>
     );
 }
 

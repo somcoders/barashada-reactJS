@@ -6,6 +6,7 @@ body {
 }
 .container {
   height: 100vh;
+  padding: 10px;
 }
 
 .course {
@@ -73,4 +74,20 @@ body {
 
 .course h4:hover {
   color: orange !important;
+}
+
+.light {
+  background: white;
+}
+
+.light h4 {
+  color: black;
+}
+
+.dark {
+  background: black;
+}
+
+.dark h4 {
+  color: white;
 }
