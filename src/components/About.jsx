@@ -1,15 +1,14 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { ThemeContext } from '../index';
 
-function About(props) {
+function About() {
+    const {theme} = useContext(ThemeContext);
+
     return (
-        <ThemeContext.Consumer>
-            {theme => (
-                <div className={`container ${theme}`}>
-                    <h4>About us {theme}</h4>
-                </div>
-            )}
-        </ThemeContext.Consumer>
+
+        <div className={`container ${theme}`}>
+            <h4>About us {theme}</h4>
+        </div>
     );
 }
 

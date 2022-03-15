@@ -1,7 +1,9 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { NavLink } from 'react-router-dom';
+import { ThemeContext } from '../index';
 
-function Nav({theme,changeTheme}) {
+function Nav() {
+    const {theme,changeTheme} = useContext(ThemeContext);
     return (
         <div className="nav">
             <span 

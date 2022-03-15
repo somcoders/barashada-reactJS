@@ -15,9 +15,9 @@ function App() {
         setTheme(themeSwitcher);
     }
     return (
-        <ThemeContext.Provider value={theme}>
+        <ThemeContext.Provider value={{theme,changeTheme}}>
             <BrowserRouter>
-                <Nav theme={theme} changeTheme={changeTheme}/>
+                <Nav />
                 <Pages />
             </BrowserRouter>
         </ThemeContext.Provider>
