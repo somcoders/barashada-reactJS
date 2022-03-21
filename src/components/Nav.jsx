@@ -6,7 +6,6 @@ import {AuthContext} from '../index'
 function Nav() {
     const {theme,changeTheme}   = useContext(ThemeContext);
     const IsLogged              = useContext(AuthContext);
-    console.log(IsLogged);
     return (
         <div className="nav">
             <span 
