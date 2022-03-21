@@ -75,6 +75,9 @@ body {
 .course h4:hover {
   color: orange !important;
 }
+.course h4 {
+  color: white !important;
+}
 
 .light {
   background: white;

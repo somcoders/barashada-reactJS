@@ -1,11 +1,13 @@
-import { useState,useEffect } from 'react'
+import { useState,useEffect,useContext } from 'react'
 import Course from './Course'
 import ReactLoading from 'react-loading';
+import { ThemeContext } from '../context/ThemeContextProvider';
 
 export default function Courses(){
     const [allCourses,setAllCourses] = useState([]);
     const [filteredCourses,setFilteredCourses] = useState([]);
     const [loading,setLoading] = useState(false);
+    const {theme} = useContext(ThemeContext);
 
     const url = "https://raw.githubusercontent.com/somcoders/barashada-reactJS/main/data.json"
     useEffect(() => {
@@ -63,7 +65,7 @@ export default function Courses(){
     );
 
     return (
-        <>  
+        <div className={`container ${theme}`}>  
             <div className="filters">
                 {filterData.map(filter => <button key={filter} onClick={filterCourses}>{filter}</button>)}
             </div>
@@ -76,7 +78,7 @@ export default function Courses(){
                 </div>
             }
           
-        </>
+        </div>
        
     )
 }
