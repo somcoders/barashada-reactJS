@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/barashada-reactJS/static/css/main.20a77f8d.css",
+    "main.js": "/barashada-reactJS/static/js/main.cd49e77c.js",
+    "index.html": "/barashada-reactJS/index.html",
+    "main.20a77f8d.css.map": "/barashada-reactJS/static/css/main.20a77f8d.css.map",
+    "main.cd49e77c.js.map": "/barashada-reactJS/static/js/main.cd49e77c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20a77f8d.css",
+    "static/js/main.cd49e77c.js"
+  ]
+}
