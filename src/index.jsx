@@ -12,7 +12,7 @@ function App() {
   
     return (
         <ThemeContextProvider>
-            <AuthContext.Provider value={true}>
+            <AuthContext.Provider value={false}>
                 <BrowserRouter>
                     <Nav />
                     <Pages />
